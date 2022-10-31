@@ -1,7 +1,7 @@
 const content = document.getElementById("inicioMensagem")
 const button = document.getElementById("btnMensagem")
 
-const paises = [
+const geradorpaises = [
     ["Brasil", "Samba", 0],
     ["Argentina", "Tango", 0],
     ["Alemanha", "Schnitzel", 0],
@@ -15,13 +15,13 @@ const paises = [
 ]
 
 const handleBtn = () => {
-    const number = Math.floor(Math.random() * paises.length)
-    paises[number][2] += 1
+    const number = Math.floor(Math.random() * geradorpaises.length)
+    geradorpaises[number][2] += 1
     content.innerHTML = 
     `
-    <p>País sorteado: <span>${paises[number][0]} </span></p>
-    <p>É lembrado por: <span>${paises[number][1]} </span></p>
-    <p>Nº de vezes sorteado: <span>${paises[number][2]} </span></p>
+    <p>País sorteado: <span>${geradorpaises[number][0]} </span></p>
+    <p>É lembrado por: <span>${geradorpaises[number][1]} </span></p>
+    <p>Nº de vezes sorteado: <span>${geradorpaises[number][2]} </span></p>
     `
 }
 
